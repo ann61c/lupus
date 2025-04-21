@@ -55,7 +55,25 @@
           </div>
           
           <div class="about-image">
-            <img src="../assets/lupus-illustration.jpg" alt="Lupus illustration showing how it affects multiple systems in the body" />
+            <div 
+              class="image-container" 
+              tabindex="0" 
+              role="button" 
+              aria-label="Image of lupus facial rash. This image is blurred. Press Enter or Space to reveal, or hover with mouse."
+              @keydown.space.prevent="toggleImage"
+              @keydown.enter.prevent="toggleImage"
+            >
+              <div class="image-blur-notice">
+                <span>This image shows lupus facial rash symptoms</span>
+                <span class="hover-instruction">Hover or press Enter to view</span>
+              </div>
+              <img 
+                src="../assets/lupus-facial-rash.jpeg" 
+                alt="Lupus butterfly rash on face showing the characteristic red rash across cheeks and nose" 
+                class="blurred-image" 
+                :class="{ 'not-blurred': imageRevealed }"
+              />
+            </div>
             <div class="about-callout">
               <h3>Seeking Diagnosis</h3>
               <p>If you're experiencing several of these symptoms, consult a healthcare provider. Diagnosis typically involves a combination of blood tests, urine tests, and a thorough review of symptoms.</p>
@@ -71,8 +89,18 @@
 <script setup>
 // Import CSS file
 import '../assets/styles/views/AboutPage.css'
+import { ref } from 'vue';
+
+const imageRevealed = ref(false);
+
+const toggleImage = () => {
+  imageRevealed.value = !imageRevealed.value;
+};
 </script>
 
 <style scoped>
 /* Styles moved to AboutPage.css */
+.not-blurred {
+  filter: blur(0) !important;
+}
 </style> 

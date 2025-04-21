@@ -251,4 +251,53 @@ h1 {
   .about-page .about-section {
     padding: 3rem 1rem;
   }
+}
+
+.about-page .image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-page .blurred-image {
+  width: 100%;
+  filter: blur(10px);
+  transition: filter 0.3s ease;
+}
+
+.about-page .image-container:hover .blurred-image {
+  filter: blur(0);
+}
+
+.about-page .image-blur-notice {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+  text-align: center;
+  padding: 1rem;
+}
+
+.about-page .image-container:hover .image-blur-notice {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.about-page .hover-instruction {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  background-color: rgba(138, 43, 226, 0.7);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  display: inline-block;
 } 
