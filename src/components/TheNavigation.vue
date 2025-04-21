@@ -7,12 +7,12 @@
       </router-link>
     </div>
     <div class="nav-links">
-      <router-link to="/" exact-active-class="router-link-active" class="nav-link">Home</router-link>
-      <router-link to="/about" class="nav-link">About Lupus</router-link>
-      <router-link to="/symptoms" class="nav-link">Symptoms</router-link>
-      <router-link to="/treatments" class="nav-link">Treatments</router-link>
-      <router-link to="/lifestyle" class="nav-link">Lifestyle</router-link>
-      <router-link to="/tracker" class="nav-link">Symptom Tracker</router-link>
+      <router-link to="/" exact-active-class="router-link-active" class="nav-link">{{ t('home') }}</router-link>
+      <router-link to="/about" class="nav-link">{{ t('about') }}</router-link>
+      <router-link to="/symptoms" class="nav-link">{{ t('symptoms') }}</router-link>
+      <router-link to="/treatments" class="nav-link">{{ t('treatments') }}</router-link>
+      <router-link to="/lifestyle" class="nav-link">{{ t('lifestyle') }}</router-link>
+      <router-link to="/tracker" class="nav-link">{{ t('tracker') }}</router-link>
     </div>
     
     <button class="mobile-menu-btn" @click="toggleMobileMenu">
@@ -23,19 +23,21 @@
       <button class="close-menu-btn" @click="toggleMobileMenu">
         <font-awesome-icon icon="times" />
       </button>
-      <router-link to="/" @click="toggleMobileMenu" class="mobile-nav-link">Home</router-link>
-      <router-link to="/about" @click="toggleMobileMenu" class="mobile-nav-link">About Lupus</router-link>
-      <router-link to="/symptoms" @click="toggleMobileMenu" class="mobile-nav-link">Symptoms</router-link>
-      <router-link to="/treatments" @click="toggleMobileMenu" class="mobile-nav-link">Treatments</router-link>
-      <router-link to="/lifestyle" @click="toggleMobileMenu" class="mobile-nav-link">Lifestyle</router-link>
-      <router-link to="/tracker" @click="toggleMobileMenu" class="mobile-nav-link">Symptom Tracker</router-link>
+      <router-link to="/" @click="toggleMobileMenu" class="mobile-nav-link">{{ t('home') }}</router-link>
+      <router-link to="/about" @click="toggleMobileMenu" class="mobile-nav-link">{{ t('about') }}</router-link>
+      <router-link to="/symptoms" @click="toggleMobileMenu" class="mobile-nav-link">{{ t('symptoms') }}</router-link>
+      <router-link to="/treatments" @click="toggleMobileMenu" class="mobile-nav-link">{{ t('treatments') }}</router-link>
+      <router-link to="/lifestyle" @click="toggleMobileMenu" class="mobile-nav-link">{{ t('lifestyle') }}</router-link>
+      <router-link to="/tracker" @click="toggleMobileMenu" class="mobile-nav-link">{{ t('tracker') }}</router-link>
     </div>
   </nav>
 </template>
 
 <script setup>
 import { ref } from 'vue';
+import { useTranslation } from '../composables/useTranslation';
 
+const { t } = useTranslation();
 const mobileMenuOpen = ref(false);
 
 const toggleMobileMenu = () => {

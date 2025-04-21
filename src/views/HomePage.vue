@@ -16,7 +16,7 @@
             </div>
             <h3>Learn About Lupus</h3>
             <p>Explore comprehensive information about lupus, its symptoms, and treatment options.</p>
-            <router-link to="/about" class="highlight-link">About Lupus</router-link>
+            <router-link to="/about" class="highlight-link">{{ t('about') }}</router-link>
           </div>
           
           <div class="highlight-card">
@@ -25,7 +25,7 @@
             </div>
             <h3>Track Your Symptoms</h3>
             <p>Use our symptom tracker to monitor changes and identify patterns in your health.</p>
-            <router-link to="/tracker" class="highlight-link">Symptom Tracker</router-link>
+            <router-link to="/tracker" class="highlight-link">{{ t('tracker') }}</router-link>
           </div>
           
           <div class="highlight-card">
@@ -34,7 +34,7 @@
             </div>
             <h3>Treatment Options</h3>
             <p>Learn about different treatment approaches and management strategies for lupus.</p>
-            <router-link to="/treatments" class="highlight-link">Treatment Options</router-link>
+            <router-link to="/treatments" class="highlight-link">{{ t('treatments') }}</router-link>
           </div>
         </div>
       </div>
@@ -45,6 +45,9 @@
 <script setup>
 import HeroSection from '../components/HeroSection.vue'
 import '../assets/styles/views/HomePage.css'
+import { useTranslation } from '../composables/useTranslation';
+
+const { t } = useTranslation();
 </script>
 
 <style scoped>

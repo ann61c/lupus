@@ -1,18 +1,20 @@
 <template>
   <div class="hero">
     <div class="hero-content">
-      <h1>Empowering Women with Lupus</h1>
-      <p>Access reliable information, connect with others, and take control of your health journey</p>
+      <h1>{{ t('heroTitle') }}</h1>
+      <p>{{ t('heroSubtitle') }}</p>
       <div class="hero-buttons">
-        <router-link to="/symptoms" class="btn btn-primary">Learn About Symptoms</router-link>
-        <router-link to="/tracker" class="btn btn-secondary">Track Your Symptoms</router-link>
+        <router-link to="/symptoms" class="btn btn-primary">{{ t('symptoms') }}</router-link>
+        <router-link to="/tracker" class="btn btn-secondary">{{ t('tracker') }}</router-link>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-// Hero section component
+import { useTranslation } from '../composables/useTranslation';
+
+const { t } = useTranslation();
 </script>
 
 <style scoped>

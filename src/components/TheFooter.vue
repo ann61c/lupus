@@ -8,46 +8,56 @@
         </div>
         
         <div class="footer-section">
-          <h3>Quick Links</h3>
+          <h3>{{ t('quickLinks') }}</h3>
           <ul class="footer-links">
-            <li><router-link to="/">Home</router-link></li>
-            <li><router-link to="/about">About Lupus</router-link></li>
-            <li><router-link to="/symptoms">Symptoms</router-link></li>
-            <li><router-link to="/treatments">Treatments</router-link></li>
-            <li><router-link to="/lifestyle">Lifestyle</router-link></li>
+            <li><router-link to="/">{{ t('home') }}</router-link></li>
+            <li><router-link to="/about">{{ t('about') }}</router-link></li>
+            <li><router-link to="/symptoms">{{ t('symptoms') }}</router-link></li>
+            <li><router-link to="/treatments">{{ t('treatments') }}</router-link></li>
+            <li><router-link to="/lifestyle">{{ t('lifestyle') }}</router-link></li>
           </ul>
         </div>
         
         <div class="footer-section">
-          <h3>Resources</h3>
+          <h3>{{ t('resources') }}</h3>
           <ul class="footer-links">
-            <li><router-link to="/community">Community Voices</router-link></li>
-            <li><router-link to="/tracker">Symptom Tracker</router-link></li>
-            <li><router-link to="/faq">FAQ</router-link></li>
-            <li><router-link to="/resources">Resources</router-link></li>
+            <li><router-link to="/community">{{ t('community') }}</router-link></li>
+            <li><router-link to="/tracker">{{ t('tracker') }}</router-link></li>
+            <li><router-link to="/faq">{{ t('faq') }}</router-link></li>
+            <li><router-link to="/resources">{{ t('resources') }}</router-link></li>
           </ul>
         </div>
         
         <div class="footer-section">
-          <h3>Languages</h3>
+          <h3>{{ t('languages') }}</h3>
           <div class="language-options">
-            <button class="language-btn active">English</button>
-            <button class="language-btn">Español</button>
-            <button class="language-btn">中文</button>
+            <button 
+              v-for="(lang, code) in availableLanguages" 
+              :key="code"
+              class="language-btn" 
+              :class="{ 'active': isActive(code) }"
+              @click="setLanguage(code)"
+            >
+              {{ lang.name }}
+            </button>
           </div>
         </div>
       </div>
       
       <div class="footer-bottom">
-        <p>&copy; {{ new Date().getFullYear() }} LupusConnect. All rights reserved.</p>
-        <p class="disclaimer">This website is for informational purposes only and does not provide medical advice. Consult with healthcare professionals for personal medical concerns.</p>
+        <p>{{ t('copyright') }}</p>
+        <p class="disclaimer">{{ t('disclaimer') }}</p>
       </div>
     </div>
   </footer>
 </template>
 
 <script setup>
-// Footer component
+import { useLanguage } from '../composables/useLanguage';
+import { useTranslation } from '../composables/useTranslation';
+
+const { availableLanguages, setLanguage, isActive } = useLanguage();
+const { t } = useTranslation();
 </script>
 
 <style scoped>
