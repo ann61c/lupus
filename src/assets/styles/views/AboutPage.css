@@ -1,0 +1,254 @@
+.page-header {
+  background-color: #8a2be2;
+  color: white;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-intro {
+  padding: 4rem 1rem;
+  background-color: #fff;
+}
+
+.about-section {
+  padding: 4rem 1rem;
+  background-color: #f8f5ff;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.about-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+}
+
+.about-card h3 {
+  color: #8a2be2;
+  margin-bottom: 1rem;
+}
+
+.mission-section {
+  background: white;
+  padding: 4rem 1rem;
+}
+
+.mission-content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.mission-text {
+  flex: 1;
+}
+
+.mission-image {
+  flex: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.mission-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.team-section {
+  padding: 4rem 1rem;
+  background-color: #f8f5ff;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.team-member {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.team-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  overflow: hidden;
+}
+
+.team-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-member h3 {
+  color: #8a2be2;
+  margin-bottom: 0.5rem;
+}
+
+.team-member p.role {
+  color: #666;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-links a {
+  color: #8a2be2;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    padding: 3rem 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .mission-content {
+    flex-direction: column;
+  }
+
+  .mission-image {
+    order: -1;
+  }
+}
+
+.about-page .about-section {
+  padding: 5rem 1rem;
+  background-color: white;
+}
+
+.about-page .about-content {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 2rem;
+}
+
+.about-page .about-text h3 {
+  color: #8a2be2;
+  margin: 2rem 0 1rem;
+}
+
+.about-page .about-text h3:first-child {
+  margin-top: 0;
+}
+
+.about-page .about-text p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.about-page .types-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.about-page .type-card {
+  background-color: #f8f5ff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.about-page .type-card h4 {
+  color: #8a2be2;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.about-page .type-card p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.about-page .warning-signs {
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+}
+
+.about-page .warning-signs li {
+  margin-bottom: 0.75rem;
+}
+
+.about-page .about-image {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-page .about-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-page .about-callout {
+  background-color: #8a2be2;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.about-page .about-callout h3 {
+  color: white;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.about-page .about-callout p {
+  margin-bottom: 1rem;
+}
+
+.about-page .about-callout p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .about-page .about-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-page .about-section {
+    padding: 3rem 1rem;
+  }
+} 

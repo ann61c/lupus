@@ -1,0 +1,269 @@
+.hero {
+  background-color: #8a2be2;
+  color: white;
+  padding: 5rem 1rem;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: white;
+  color: #8a2be2;
+  border: none;
+  border-radius: 30px;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cta-button:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+.secondary-button {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.secondary-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.about-section {
+  padding: 5rem 1rem;
+  background-color: #f8f5ff;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-image {
+  flex: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.features-section {
+  padding: 5rem 1rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #8a2be2;
+}
+
+.feature-card h3 {
+  color: #8a2be2;
+  margin-bottom: 0.5rem;
+}
+
+.testimonials-section {
+  padding: 5rem 1rem;
+  background-color: #f8f5ff;
+}
+
+.testimonials-slider {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  margin: 0 1rem;
+  text-align: center;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  overflow: hidden;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonial-text {
+  font-style: italic;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.testimonial-author {
+  font-weight: 600;
+  color: #8a2be2;
+}
+
+.cta-section {
+  padding: 5rem 1rem;
+  background-color: #8a2be2;
+  color: white;
+  text-align: center;
+}
+
+.cta-section h2 {
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .about-content {
+    flex-direction: column;
+  }
+  
+  .about-image {
+    order: -1;
+  }
+}
+
+.home-page .highlights-section {
+  padding: 5rem 1rem;
+  background-color: #f9f9f9;
+}
+
+.home-page h2 {
+  color: #8a2be2;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.home-page .section-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.home-page .highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.home-page .highlight-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.home-page .highlight-card:hover {
+  transform: translateY(-5px);
+}
+
+.home-page .highlight-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #8a2be2;
+}
+
+.home-page .highlight-card h3 {
+  color: #8a2be2;
+  margin-bottom: 1rem;
+}
+
+.home-page .highlight-card p {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.home-page .highlight-link {
+  display: inline-block;
+  color: #8a2be2;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border: 2px solid #8a2be2;
+  border-radius: 30px;
+}
+
+.home-page .highlight-link:hover {
+  background-color: #8a2be2;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .home-page .highlights-section {
+    padding: 3rem 1rem;
+  }
+  
+  .home-page h2 {
+    font-size: 2rem;
+  }
+} 

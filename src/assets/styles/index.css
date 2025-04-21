@@ -1,0 +1,66 @@
+/* Import view styles */
+@import './views/AboutPage.css';
+@import './views/HomePage.css';
+@import './views/LifestylePage.css';
+@import './views/SymptomsPage.css';
+@import './views/TrackerPage.css';
+@import './views/TreatmentsPage.css';
+
+/* Common styles for consistent page layouts */
+.page-header {
+  background-color: #8a2be2;
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Global button styles */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #8a2be2;
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+  background-color: white;
+  color: #8a2be2;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .page-header {
+    padding: 2rem 1rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+} 

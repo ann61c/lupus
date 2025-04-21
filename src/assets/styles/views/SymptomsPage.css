@@ -1,0 +1,105 @@
+.page-header {
+  background-color: #8a2be2;
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.symptoms-page .symptoms-section {
+  padding: 5rem 1rem;
+  background-color: #f8f5ff;
+}
+
+.symptoms-page .symptoms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.symptoms-page .symptom-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.symptoms-page .symptom-card:hover {
+  transform: translateY(-5px);
+}
+
+.symptoms-page .symptom-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #8a2be2;
+  text-align: center;
+}
+
+.symptoms-page .symptom-card h3 {
+  color: #8a2be2;
+  margin-bottom: 0.5rem;
+}
+
+.symptoms-page .symptom-actions {
+  margin-top: 1rem;
+}
+
+.symptoms-page .collapse-btn {
+  background: transparent;
+  border: none;
+  color: #8a2be2;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.symptoms-page .symptom-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.symptoms-page .symptom-details.open {
+  max-height: 500px;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+  opacity: 1;
+}
+
+.symptoms-page .symptom-details ul {
+  padding-left: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.symptoms-page .symptom-details li {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    padding: 2rem 1rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .symptoms-page .symptoms-section {
+    padding: 3rem 1rem;
+  }
+} 

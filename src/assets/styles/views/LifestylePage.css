@@ -1,0 +1,111 @@
+.page-header {
+  background-color: #8a2be2;
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.lifestyle-page .lifestyle-section {
+  padding: 5rem 1rem;
+  background-color: white;
+}
+
+.lifestyle-page .tips-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.lifestyle-page .tip-card {
+  background: #f8f5ff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.lifestyle-page .tip-card:hover {
+  transform: translateY(-5px);
+}
+
+.lifestyle-page .tip-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #8a2be2;
+  text-align: center;
+}
+
+.lifestyle-page .tip-card h3 {
+  color: #8a2be2;
+  margin-bottom: 0.5rem;
+}
+
+.lifestyle-page .tip-card ul {
+  padding-left: 1.2rem;
+}
+
+.lifestyle-page .tip-card li {
+  margin-bottom: 0.5rem;
+}
+
+.lifestyle-page .lifestyle-cta {
+  background: #8a2be2;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.lifestyle-page .lifestyle-cta h3 {
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.lifestyle-page .lifestyle-cta p {
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: white;
+  color: #8a2be2;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    padding: 2rem 1rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .lifestyle-page .lifestyle-section {
+    padding: 3rem 1rem;
+  }
+} 
