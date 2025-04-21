@@ -52,7 +52,13 @@
         </div>
         
         <div class="about-image">
-          <img src="../assets/lupus-illustration.jpg" alt="Lupus illustration showing how it affects multiple systems in the body" />
+          <div class="image-container">
+            <div class="image-blur-notice">
+              <span>This image shows lupus facial rash symptoms</span>
+              <span class="hover-instruction">Hover to view unblurred image</span>
+            </div>
+            <img src="../assets/lupus-facial-rash.jpeg" alt="Lupus illustration showing facial butterfly rash pattern" class="blurred-image" />
+          </div>
           <div class="about-callout">
             <h3>Seeking Diagnosis</h3>
             <p>If you're experiencing several of these symptoms, consult a healthcare provider. Diagnosis typically involves a combination of blood tests, urine tests, and a thorough review of symptoms.</p>
@@ -155,10 +161,57 @@ h2 {
   gap: 1.5rem;
 }
 
-.about-image img {
-  width: 100%;
+.image-container {
+  position: relative;
+  overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.blurred-image {
+  width: 100%;
+  filter: blur(10px);
+  transition: filter 0.3s ease;
+}
+
+.image-container:hover .blurred-image {
+  filter: blur(0);
+}
+
+.image-blur-notice {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+  text-align: center;
+  padding: 1rem;
+}
+
+.image-container:hover .image-blur-notice {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hover-instruction {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  background-color: rgba(138, 43, 226, 0.7);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.about-image img {
+  width: 100%;
 }
 
 .about-callout {

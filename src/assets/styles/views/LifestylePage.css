@@ -28,10 +28,13 @@ h1 {
 }
 
 .lifestyle-page .tip-card {
-  background: #f8f5ff;
+  background: white;
   border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   padding: 1.5rem;
   transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .lifestyle-page .tip-card:hover {
@@ -52,10 +55,38 @@ h1 {
 
 .lifestyle-page .tip-card ul {
   padding-left: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 .lifestyle-page .tip-card li {
   margin-bottom: 0.5rem;
+}
+
+/* Styling for reference citations */
+.lifestyle-page .reference {
+  font-size: 0.8rem;
+  color: #666;
+  border-top: 1px solid #eaeaea;
+  padding-top: 0.8rem;
+  margin-top: auto;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.lifestyle-page .reference:before {
+  content: "📚 ";
+}
+
+.lifestyle-page .reference [data-doi] {
+  color: #8a2be2;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.lifestyle-page .reference [data-doi]:hover {
+  text-decoration: underline;
+  color: #6a1b9a;
 }
 
 .lifestyle-page .lifestyle-cta {
@@ -107,5 +138,9 @@ h1 {
   
   .lifestyle-page .lifestyle-section {
     padding: 3rem 1rem;
+  }
+  
+  .lifestyle-page .reference {
+    font-size: 0.75rem;
   }
 } 

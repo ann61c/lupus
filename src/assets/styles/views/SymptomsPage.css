@@ -34,6 +34,8 @@ h1 {
   transition: transform 0.3s ease;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .symptoms-page .symptom-card:hover {
@@ -84,10 +86,37 @@ h1 {
 .symptoms-page .symptom-details ul {
   padding-left: 1.2rem;
   margin-top: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .symptoms-page .symptom-details li {
   margin-bottom: 0.5rem;
+}
+
+.symptoms-page .reference {
+  font-size: 0.8rem;
+  color: #666;
+  border-top: 1px solid #eaeaea;
+  padding-top: 0.8rem;
+  margin-top: 1rem;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.symptoms-page .reference:before {
+  content: "📚 ";
+}
+
+.symptoms-page .reference a {
+  color: #8a2be2;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  display: inline-block;
+}
+
+.symptoms-page .reference a:hover {
+  text-decoration: underline;
+  color: #6a1b9a;
 }
 
 @media (max-width: 768px) {
@@ -101,5 +130,9 @@ h1 {
   
   .symptoms-page .symptoms-section {
     padding: 3rem 1rem;
+  }
+  
+  .symptoms-page .reference {
+    font-size: 0.75rem;
   }
 } 
