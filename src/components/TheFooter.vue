@@ -15,16 +15,7 @@
             <li><router-link to="/symptoms">{{ t('symptoms') }}</router-link></li>
             <li><router-link to="/treatments">{{ t('treatments') }}</router-link></li>
             <li><router-link to="/lifestyle">{{ t('lifestyle') }}</router-link></li>
-          </ul>
-        </div>
-        
-        <div class="footer-section">
-          <h3>{{ t('resources') }}</h3>
-          <ul class="footer-links">
-            <li><router-link to="/community">{{ t('community') }}</router-link></li>
             <li><router-link to="/tracker">{{ t('tracker') }}</router-link></li>
-            <li><router-link to="/faq">{{ t('faq') }}</router-link></li>
-            <li><router-link to="/resources">{{ t('resources') }}</router-link></li>
           </ul>
         </div>
         
