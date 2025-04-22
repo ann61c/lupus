@@ -28,7 +28,7 @@
               </div>
               <div class="scale-labels">
                 <span>None</span>
-                <span>Severe</span>
+                <span>Very Bad</span>
               </div>
             </div>
             
@@ -42,7 +42,7 @@
               </div>
               <div class="scale-labels">
                 <span>None</span>
-                <span>Severe</span>
+                <span>Very Bad</span>
               </div>
             </div>
             
@@ -56,7 +56,7 @@
               </div>
               <div class="scale-labels">
                 <span>None</span>
-                <span>Severe</span>
+                <span>Very Bad</span>
               </div>
             </div>
             
@@ -74,19 +74,19 @@
                 </div>
                 <div class="checkbox-option">
                   <input type="checkbox" id="trigger-sun" v-model="symptoms.triggers.sun">
-                  <label for="trigger-sun">Sun exposure</label>
+                  <label for="trigger-sun">Being in the sun</label>
                 </div>
                 <div class="checkbox-option">
                   <input type="checkbox" id="trigger-lack-sleep" v-model="symptoms.triggers.lackOfSleep">
-                  <label for="trigger-lack-sleep">Lack of sleep</label>
+                  <label for="trigger-lack-sleep">Not enough sleep</label>
                 </div>
                 <div class="checkbox-option">
                   <input type="checkbox" id="trigger-food" v-model="symptoms.triggers.food">
-                  <label for="trigger-food">Food sensitivity</label>
+                  <label for="trigger-food">Food reaction</label>
                 </div>
                 <div class="checkbox-option">
                   <input type="checkbox" id="trigger-medication" v-model="symptoms.triggers.medication">
-                  <label for="trigger-medication">Medication change</label>
+                  <label for="trigger-medication">Change in medicine</label>
                 </div>
               </div>
             </div>
@@ -96,7 +96,7 @@
           
           <div class="tracker-history">
             <h3>{{ t('symptomHistory') }}</h3>
-            <p class="tracker-note">Your entries are saved locally on your device for privacy.</p>
+            <p class="tracker-note">Your entries are saved on your device only for privacy.</p>
             
             <div class="history-empty" v-if="history.length === 0">
               <p>{{ t('noSymptomsYet') }}</p>

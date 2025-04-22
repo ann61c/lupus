@@ -2,8 +2,8 @@
   <div class="community-page">
     <div class="page-header">
       <div class="container">
-        <h1>Community Voices</h1>
-        <p>Stories and experiences from women living with lupus</p>
+        <h1>{{ t('communityPageTitle') }}</h1>
+        <p>{{ t('communityPageSubtitle') }}</p>
       </div>
     </div>
     
@@ -13,6 +13,9 @@
 
 <script setup>
 import VoicesSection from '../components/VoicesSection.vue'
+import { useTranslation } from '../composables/useTranslation';
+
+const { t } = useTranslation();
 </script>
 
 <style scoped>

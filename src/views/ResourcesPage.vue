@@ -2,8 +2,8 @@
   <div class="resources-page">
     <div class="page-header">
       <div class="container">
-        <h1>Resources</h1>
-        <p>Helpful resources and links for living with lupus</p>
+        <h1>{{ t('resources') }}</h1>
+        <p>{{ t('resourcesPageSubtitle') }}</p>
       </div>
     </div>
     
@@ -13,6 +13,9 @@
 
 <script setup>
 import ResourcesSection from '../components/ResourcesSection.vue'
+import { useTranslation } from '../composables/useTranslation';
+
+const { t } = useTranslation();
 </script>
 
 <style scoped>

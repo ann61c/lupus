@@ -2,8 +2,8 @@
   <div class="faq-page">
     <div class="page-header">
       <div class="container">
-        <h1>Frequently Asked Questions</h1>
-        <p>Answers to common questions about lupus</p>
+        <h1>{{ t('faqPageTitle') }}</h1>
+        <p>{{ t('faqPageSubtitle') }}</p>
       </div>
     </div>
     
@@ -13,6 +13,9 @@
 
 <script setup>
 import FaqSection from '../components/FaqSection.vue'
+import { useTranslation } from '../composables/useTranslation';
+
+const { t } = useTranslation();
 </script>
 
 <style scoped>
